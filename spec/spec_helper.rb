@@ -19,6 +19,7 @@ Spec::Runner.configure do |config|
 
   # == Fixtures
   #
+  config.global_fixtures = :all
   # You can declare fixtures for each example_group like this:
   #   describe "...." do
   #     fixtures :table_a, :table_b
