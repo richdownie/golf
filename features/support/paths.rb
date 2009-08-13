@@ -8,9 +8,15 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
     
-    when /the home page/
-      @environment + "/home"
-    
+      when /the home page/
+        @environment + "/home"
+        
+      when /the tesms page/
+        @environment + "/teams"
+        
+      when /the golfers page/
+        @environment + "/golfers"
+
     # Add more mappings here.
     # Here is a more fancy example:
     #

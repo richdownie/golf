@@ -1,3 +1,6 @@
 <% @teams.each do |team| %>
   <%= team.name %>
 <% end %>
+<br />
+
+<%= button_to 'Add Your Team', new_team_path %>

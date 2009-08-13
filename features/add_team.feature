@@ -1,7 +1,7 @@
 Feature Teams
 
   Scenario: add a new team
-    Given I am on the home page
+    Given I am on the teams page
     And I click the "Add Your Team" button
     And I fill in the text field "team_name" with "Fairport"
     And I fill in the text field "team_league" with "Central"
