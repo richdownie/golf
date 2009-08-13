@@ -1,5 +1,6 @@
 class GolfersController < ApplicationController
   def index
+    @golfers = Golfer.find:all
   end
 
   def show

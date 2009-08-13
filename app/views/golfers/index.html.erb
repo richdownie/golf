@@ -1,2 +1,4 @@
-<h1>Golfers#index</h1>
-<p>Find me in app/views/golfers/index.html.erb</p>
+<% @golfers.each do |golfer| %>
+  <%= golfer.first_name %>
+  <%= golfer.last_name %>
+<% end %> 
