@@ -11,7 +11,7 @@ module NavigationHelpers
       when /the home page/
         @environment + "/home"
         
-      when /the tesms page/
+      when /the teams page/
         @environment + "/teams"
         
       when /the golfers page/
