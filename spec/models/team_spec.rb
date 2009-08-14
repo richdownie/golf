@@ -12,10 +12,10 @@ describe Team do
       end
     end
     
-    describe "#home_state" do
+    describe "#state" do
       it "should be required" do
         @team.should_not be_valid
-        @team.errors_on(:home_state).should_not be_blank
+        @team.errors_on(:state).should_not be_blank
       end
     end
   end  
@@ -23,19 +23,19 @@ describe Team do
   describe "add golfers" do
   
     it "should start with an empty array" do
-      team = Team.create(:name => "Austin High School", :home_state => "New York")
+      team = Team.create(:name => "Austin High School", :state => "New York")
       team.golfers.should == []
     end
 
     it "should have 1 golfer" do
-      team = Team.create!(:name => "Chicago Central", :home_state => "Arizona")
+      team = Team.create!(:name => "Chicago Central", :state => "Arizona")
       golfer = team.golfers.create!(:first_name => "Sam", :last_name => "Stevens")
       team.golfers.count.should == 1
       team.golfers.count.should_not == 0
     end
   
     it "should have 4 golfers" do
-      team = Team.create!(:name => "Test Team", :home_state => "Vermont")
+      team = Team.create!(:name => "Test Team", :state => "Vermont")
       golfer = team.golfers.create!(:first_name => "Sam", :last_name => "Stevens")
       team.golfers.count.should == 1
       golfer = team.golfers.create!(:first_name => "John", :last_name => "Tate")
