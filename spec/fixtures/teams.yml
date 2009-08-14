@@ -1,2 +1,23 @@
 cazenovia:
   name: Cazenovia Central High School
+  state: New York
+  
+fairport:
+  name: Fairport Central High School
+  state: New York
+  
+chili:
+  name: Chili Central High School
+  state: New York
+  
+bethlehem:
+  name: Bethlehem Central High School
+  state: New York
+  
+cleveland:
+  name: Cleveland Central High School
+  state: Ohio
+
+pittsburgh:
+  name: Pittsburgh Central High School
+  state: Pennsylvania

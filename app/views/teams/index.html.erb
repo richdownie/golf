@@ -1,7 +1,11 @@
-<% @teams.each do |team| %>
-  <%= team.name %>
-  <%= team.state %>
-<% end %>
+<table id="teams-table">
+    <% @teams.each do |team| %>
+    <tr>
+      <td><%= team.name %></td>
+      <td><%= team.state %></td>
+    </tr>
+    <% end %>
+</table>
 <br />
 
 <%= button_to 'Add Your Team', new_team_path %>
