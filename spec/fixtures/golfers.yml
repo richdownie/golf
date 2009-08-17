@@ -1,3 +1,30 @@
 downie:
   first_name: Rich
   last_name: Downie
+  team: cazenovia
+
+jw:
+  first_name: Jeff
+  last_name: Whitmire
+  team: etowa
+
+dougherty:
+  first_name: Tom 
+  last_name: Dougherty
+  team: cazenovia
+  
+reger:
+  first_name: Kyle 
+  last_name: Reger
+  team: cazenovia
+
+cummings:
+  first_name: John 
+  last_name: Cummings
+  team: cazenovia
+
+doctor:
+  first_name: John 
+  last_name: Doctor
+  team: skaneatlas
+  

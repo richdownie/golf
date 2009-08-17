@@ -21,3 +21,11 @@ cleveland:
 pittsburgh:
   name: Pittsburgh Central High School
   state: Pennsylvania
+
+skaneatlas:
+  name: Skaneatlas Central High School
+  state: New York
+  
+etowa:
+  name: Etowa Central High School
+  state: North Carolina
