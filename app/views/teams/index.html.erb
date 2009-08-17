@@ -1,7 +1,4 @@
 
-
-
-
 <% form_tag teams_path, :method => 'get' do %>
   <p>
   <%= text_field_tag :search, params[:search] %> 
@@ -11,9 +8,9 @@
 
 <table id="teams-table">
   <% @teams.each do |team| %>
-  <tr>
+  <tr>  
+    <td><%= team.state %> ~ </td> 
     <td><%= team.name %></td>
-    <td><%= team.state %></td>
     <td><%= team.team_avg %></td>
   </tr>
   <% end %>
