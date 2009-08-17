@@ -3,5 +3,8 @@
 <% form_for @golfer do |f| %>
   First Name: <%= f.text_field :first_name %><br />
   Last Name: <%= f.text_field :last_name %><br />
+  <%= @teams = Team.find(:all, :order => "name") 
+    collection_select (:golfer, :team_id, @teams, :id, :name, {:prompt => 'Select Your Team'}) 
+  %>
   <%= f.submit 'Add Golfer' %>
 <% end %>

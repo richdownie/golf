@@ -5,11 +5,13 @@
   <tr>
     <th>Team Name</th>
     <th>State</th>
+    <th>Average</th>
   </tr>
     <% @teams.each do |team| %>
     <tr>
       <td><%= team.name %></td>
       <td><%= team.state %></td>
+      <td><%= team.team_avg %></td>
     </tr>    
     <% end %>
 </table>
@@ -23,6 +25,7 @@
     <th>Last Name</th>
     <th>Team</th>
     <th>State</th>
+    <th>Average</th>
   </tr>
     <% @golfers.each do |golfer| %>
     <tr>
@@ -30,6 +33,7 @@
       <td><%= golfer.last_name %></td>
       <td><%= golfer.team.name %></td>
       <td><%= golfer.team.state %></td>
+      <td><%= golfer.golfer_avg %></td>
     </tr>      
   <% end %>
 </table>
