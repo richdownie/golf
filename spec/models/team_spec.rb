@@ -11,6 +11,16 @@ describe Team do
         @team.errors_on(:name).should_not be_blank
       end
     end
+
+    describe "#name" do
+      it "should be unique" do
+        team = teams(:cazenovia)
+        @team = Team.create(:name => "Cazenovia", :county => "Monroe", :state => "NY", :country => "US")
+        
+        @team.should_not be_valid
+        @team.errors_on(:name).should_not be_blank
+      end
+    end
     
     describe "#county" do
       it "should be required" do
