@@ -1,17 +1,25 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe HomeController do
+  describe "index" do
+    context "when logged in as a non-admin" do
+      before do
+        get :index
+      end
 
-  #Delete these examples and add some real ones
-  it "should use HomeController" do
-    controller.should be_an_instance_of(HomeController)
-  end
+      it "should be successful" do
+        response.should be_success
+      end
 
+      it "should find top 5 golfers" do
+        assigns[:golfers].should == Golfer.top_golfers
+        assigns[:golfers].size.should == 5
+      end
 
-  describe "GET 'index'" do
-    it "should be successful" do
-      get 'index'
-      response.should be_success
+      it "should find top 5 teams" do
+        assigns[:teams].should == Team.top_teams
+        assigns[:teams].size.should == 5
+      end
     end
   end
 end

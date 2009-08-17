@@ -20,4 +20,18 @@ describe Golfer do
       end
     end  
   end
+  
+  describe "find team attributes" do
+    it "should find a golfers team name" do
+      golfer = golfers(:downie)
+      
+      golfer.team.name.should == "Cazenovia Central High School"
+    end
+    
+    it "should find a golfers state" do
+      golfer = golfers(:downie)
+
+      golfer.team.state.should == "New York"
+    end
+  end
 end
