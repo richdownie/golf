@@ -25,13 +25,13 @@ describe Golfer do
     it "should find a golfers team name" do
       golfer = golfers(:downie)
       
-      golfer.team.name.should == "Cazenovia Central High School"
+      golfer.team.name.should == "Cazenovia"
     end
     
     it "should find a golfers state" do
       golfer = golfers(:downie)
 
-      golfer.team.state.should == "New York"
+      golfer.team.state.should == "NY"
     end
   end
 end

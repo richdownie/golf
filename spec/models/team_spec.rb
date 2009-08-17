@@ -36,19 +36,19 @@ describe Team do
   
   describe "adding golfers to teams" do
     it "should start with an empty array" do
-      team = Team.create(:name => "Austin High School", :county => "Monroe", :state => "New York", :country => "US")
+      team = Team.create(:name => "Austin High School", :county => "Monroe", :state => "NY", :country => "US")
       team.golfers.should == []
     end
 
     it "should have 1 golfer" do
-      team = Team.create!(:name => "Chicago Central", :county => "Monroe", :state => "New York", :country => "US")
+      team = Team.create!(:name => "Chicago Central", :county => "Monroe", :state => "NY", :country => "US")
       golfer = team.golfers.create!(:first_name => "Sam", :last_name => "Stevens")
       team.golfers.count.should == 1
       team.golfers.count.should_not == 0
     end
   
     it "should have 4 golfers" do
-      team = Team.create!(:name => "Test Team", :county => "Monroe", :state => "New York", :country => "US")
+      team = Team.create!(:name => "Test Team", :county => "Monroe", :state => "NY", :country => "US")
       golfer = team.golfers.create!(:first_name => "Sam", :last_name => "Stevens")
       team.golfers.count.should == 1
       golfer = team.golfers.create!(:first_name => "John", :last_name => "Tate")

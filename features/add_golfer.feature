@@ -6,6 +6,6 @@ Feature: Golfers
     And I click the "Add a Golfer" button
     And I fill in the text field "golfer_first_name" with "Joe"
     And I fill in the text field "golfer_last_name" with "Smith"
-    And I select "Cazenovia Central High School" from "golfer_team_id"
+    And I select "Cazenovia" from "golfer_team_id"
     And I click the "Add Golfer" button
     
