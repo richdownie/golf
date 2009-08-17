@@ -2,43 +2,52 @@ cazenovia:
   name: Cazenovia
   state: NY
   team_avg: 38
+  county: Monroe
   
 cazpa:
   name: Cazpa
   state: AL
   team_avg: 50
+  county: Monroe
 
 fairport:
   name: Fairport
   state: NY
   team_avg: 45
+  county: Monroe
   
 chili:
   name: Chili
   state: NY
   team_avg: 44
+  county: Monroe
   
 bethlehem:
   name: Bethlehem
   state: NY
   team_avg: 43
+  county: Monroe
   
 cleveland:
   name: Cleveland
   state: OH
   team_avg: 42
+  county: Monroe
 
 pittsburgh:
   name: Pittsburgh
   state: PA
   team_avg: 41
+  county: Monroe
 
 skaneatlas:
   name: Skaneatlas
   state: NY
   team_avg: 40
+  county: Monroe
   
 etowa:
   name: Etowa
   state: NC
   team_avg: 39
+  county: Monroe

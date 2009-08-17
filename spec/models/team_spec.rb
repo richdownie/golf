@@ -35,13 +35,6 @@ describe Team do
         @team.errors_on(:state).should_not be_blank
       end
     end
-
-    describe "#country" do
-      it "should be required" do
-        @team.should_not be_valid
-        @team.errors_on(:country).should_not be_blank
-      end
-    end
   end  
   
   describe "adding golfers to teams" do
@@ -70,4 +63,30 @@ describe Team do
       team.golfers.count.should_not == 5
     end
   end
+    describe "#states" do
+      it "should not be valid if blank" do
+        team = teams(:cleveland)
+        
+        team.update_attribute(:state, nil)
+        team.should_not be_valid
+      end
+            
+      it "should have 50 states" do
+        Team::STATES.should have_exactly(50).items
+      end  
+
+      it "should include" do
+        Team::STATES.should include(["Alabama", "AL"], ["Wyoming", "WY"])
+      end
+      
+      it "should be valid if in the list" do
+        state_list = Team::STATES.first
+        state_list.should_not be_blank
+        
+        team = teams(:cleveland)
+        team.update_attribute(:state, state_list)
+        team.should be_valid
+        team.state.should == state_list
+      end
+    end
 end

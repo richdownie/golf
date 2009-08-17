@@ -1,59 +1,20 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe TeamsController do
+  describe "index" do
+    context "when logged in as a non-admin" do
+      before do
+        get :index
+      end
 
-  #Delete these examples and add some real ones
-  it "should use TeamsController" do
-    controller.should be_an_instance_of(TeamsController)
-  end
+      it "should be successful" do
+        response.should be_success
+      end
 
-
-  describe "GET 'index'" do
-    it "should be successful" do
-      get 'index'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'show'" do
-    it "should be successful" do
-      get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'new'" do
-    it "should be successful" do
-      get 'new'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'edit'" do
-    it "should be successful" do
-      get 'edit'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'create'" do
-    it "should be successful" do
-      get 'create'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'update'" do
-    it "should be successful" do
-      get 'update'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "should be successful" do
-      get 'destroy'
-      response.should be_success
+      it "should search by criteria" do
+        assigns[:teams].should == Team.search("Caz")
+        assigns[:teams].size.should == 2
+      end
     end
   end
 end
