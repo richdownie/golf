@@ -1,3 +1,35 @@
 <h2>Welcome to Golf</h2>
 
+<p>Top 25 Teams</p>
+
+<table id="top-teams">
+  <tr>
+    <th>Team Name</th>
+    <th>State</th>
+  </tr>
+      <% @teams.each do |team| %>
+  <tr>
+      <td><%= team.name %></td>
+      <td><%= team.state %></td>
+  </tr>    
+    <% end %>
+</table>
+
+<p>Top 25 Golfers</p>
+
+<table id="top-golfers">
+  <tr>
+    <th>Golfer Name</th>
+  </tr>
+  <% @golfers.each do |golfer| %>
+    <tr>
+      <td><%= golfer.first_name %></td>
+      <td><%= golfer.last_name %></td>
+      <td><%= golfer.team.name %></td>
+    </tr>      
+  <% end %>
+</table>
+
+      
+
 <%= link_to 'Teams', teams_path %> | <%= link_to 'Golfers', golfers_path %>
