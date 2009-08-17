@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
   def index
-    @teams = Team.find:all
+    @teams = Team.search(params[:search])
   end
 
   def show
