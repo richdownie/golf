@@ -1,0 +1,39 @@
+cazenovia:
+  name: Cazenovia Central High School
+  state: New York
+  team_avg: 38
+  
+fairport:
+  name: Fairport Central High School
+  state: New York
+  team_avg: 45
+  
+chili:
+  name: Chili Central High School
+  state: New York
+  team_avg: 44
+  
+bethlehem:
+  name: Bethlehem Central High School
+  state: New York
+  team_avg: 43
+  
+cleveland:
+  name: Cleveland Central High School
+  state: Ohio
+  team_avg: 42
+
+pittsburgh:
+  name: Pittsburgh Central High School
+  state: Pennsylvania
+  team_avg: 41
+
+skaneatlas:
+  name: Skaneatlas Central High School
+  state: New York
+  team_avg: 40
+  
+etowa:
+  name: Etowa Central High School
+  state: North Carolina
+  team_avg: 39

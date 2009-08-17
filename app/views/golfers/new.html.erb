@@ -1,6 +1,8 @@
 <h2>Add a Golfer</h2>
 
 <% form_for @golfer do |f| %>
+  <%= error_messages_for 'golfer' %>
+  
   First Name: <%= f.text_field :first_name %><br />
   Last Name: <%= f.text_field :last_name %><br />
   <%= @teams = Team.find(:all, :order => "name") 
