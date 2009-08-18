@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
+  # before_filter :login_required
   def index
-    
     if params[:search]
       @teams = Team.all(:conditions => ['name LIKE ?', "%#{params[:search]}%"], :order => "name ASC")
     else
