@@ -1,6 +1,11 @@
 class TeamsController < ApplicationController
   def index
-    @teams = Team.search(params[:search])
+    
+    if params[:search]
+      @teams = Team.all(:conditions => ['name LIKE ?', "%#{params[:search]}%"], :order => "name ASC")
+    else
+      @teams = Team.all
+    end
   end
 
   def show
