@@ -1,12 +1,13 @@
 class CreateTeams < ActiveRecord::Migration
   def self.up
     create_table :teams do |t|
-      t.string :name
-      t.string :league
-      t.string :section
-      t.string :county
-      t.string :state
-      t.string :country
+      t.string  :name
+      t.string  :league
+      t.string  :section
+      t.string  :county
+      t.string  :state
+      t.string  :country
+      t.integer :user_id
 
       t.timestamps
     end
